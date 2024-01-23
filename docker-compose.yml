@@ -2,3 +2,4 @@ version: "3.5"
 services:
   website:
     build: .
+    container_name: ${CONTAINER_NAME}
