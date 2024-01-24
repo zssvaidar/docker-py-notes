@@ -16,4 +16,7 @@ RUN ~/.venvs/venv/bin/python3 -m pip install -r requirements.txt
 
 COPY src/ .
 
-CMD [ "/bin/bash", "-c", "source ~/.venvs/venv/bin/activate && python app.py"]
+ENV APP_PORT 5000
+
+CMD [ "/bin/bash", "-c", "source ~/.venvs/venv/bin/activate && python app.py $APP_PORT"]
+# CMD [ "/bin/bash", "-c", "~/.venvs/venv/bin/python3 app.py"]
