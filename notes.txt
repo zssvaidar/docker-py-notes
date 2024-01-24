@@ -1,0 +1,10 @@
+sudo docker run -d -p 5000:5000 first_website:latest
+sudo docker run -p 5000:5000 first_website:latest
+sudo docker run first_website:latest
+sudo docker run -d first_website:latest
+
+sudo docker run -e APP_PORT=4000 first:dev
+
+docker-compose up
+
+sudo docker run -e APP_PORT=4000 -p 4000:4000 first:dev
